@@ -43,7 +43,7 @@ func readWords() map[string]bool {
 	fileContent := readData("words.txt")
 	lines := strings.Split(fileContent, "\n")
 	for _, line := range lines {
-		wordSet[strings.ToLower(line)] = true
+		wordSet[strings.ToLower(strings.TrimSpace(line))] = true
 	}
 	return wordSet
 }
